@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .App {
   text-align: center;
 }
@@ -18,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #181C2F;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,45 @@
+.knowledge-graph-wrapper {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .knowledge-graph-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #333;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .knowledge-graph-container {
+    height: 1000px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .knowledge-graph-wrapper.dark {
+    background-color: #0f172a;
+    padding: 24px;
+    border-radius: 12px;
+    min-height: 100vh;
+    color: #e5e7eb;
+  }
+  
+  .knowledge-graph-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #f3f4f6;
+  }
+  
+  .knowledge-graph-container {
+    height: 900px;
+    border-radius: 8px;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.05);
+  }
+  
