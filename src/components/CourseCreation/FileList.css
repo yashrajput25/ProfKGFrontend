@@ -1,0 +1,106 @@
+.file-list-container {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.file-list-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff9248;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px rgba(255, 146, 72, 0.2);
+}
+
+.no-files {
+  color: #bbbbbb;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.file-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.file-card {
+  background: rgba(30, 30, 47, 0.75);
+  border: 1.5px solid #ff924870;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.file-card:hover {
+  transform: translateY(-5px);
+  border-color: #ffa768;
+  box-shadow: 0 0 20px rgba(255, 146, 72, 0.25);
+}
+
+.file-icon {
+  font-size: 2rem;
+  color: #ffb478;
+  margin-bottom: 0.5rem;
+}
+
+.file-details {
+  text-align: center;
+}
+
+.file-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.create-course-btn {
+  background-color: #ff9248;
+  color: #1e1e2f;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 146, 72, 0.4);
+}
+
+.create-course-btn:hover {
+  background-color: #ffa35a;
+  box-shadow: 0 0 16px rgba(255, 146, 72, 0.6);
+}
+
+.create-course-btn:disabled {
+  background-color: #444454;
+  color: #bbbbbb;
+  cursor: not-allowed;
+  box-shadow: none;
+  border: 1px solid #555;
+}
+
+.course-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #f2a064; /* or any color that matches your theme */
+}
+
+.file-name {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #ddd;
+}
