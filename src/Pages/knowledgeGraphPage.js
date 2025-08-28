@@ -9,6 +9,7 @@ export default function KnowledgeGraphPage() {
   const [error, setError] = useState(null);
   const [selectedStudentId, setSelectedStudentId] = useState(null);
   const [search, setSearch] = useState("");
+  console.log("API_BASE =", process.env.REACT_APP_API_URL);
 
   useEffect(() => {
     async function fetchStudents() {
