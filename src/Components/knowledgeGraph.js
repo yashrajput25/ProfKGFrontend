@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Network } from "vis-network/standalone";
+const API_BASE = process.env.REACT_APP_API_URL;
 
 /**
  * Ultra‑Polished Knowledge Graph
@@ -167,7 +168,7 @@ export default function KnowledgeGraph({ studentId }) {
     setLoading(true);
     setError(null);
 
-    fetch(`/api/knowledgeGraph/${studentId}`)
+    fetch(`${API_BASE}/api/knowledgeGraph/${studentId}`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
