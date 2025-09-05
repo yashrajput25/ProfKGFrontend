@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import KnowledgeGraph from "../Components/knowledgeGraph";
+import Loader from "../Components/Loader/Loader";
+import './knowledgeGraphPage.css';
 
 const API_BASE = process.env.REACT_APP_API_URL;
 export default function KnowledgeGraphPage() {
@@ -32,8 +34,15 @@ export default function KnowledgeGraphPage() {
       stu.fullName.toLowerCase().includes(search.toLowerCase()) ||
       (stu.email && stu.email.toLowerCase().includes(search.toLowerCase()))
   );
+  if (loading) {
+    return (
+      <div className="LoaderPlaceHolder">
+        <Loader />
+        <p style={{ padding: 20 }}>Loading students…</p>
+      </div>
+    );
+  }
 
-  if (loading) return <p style={{ padding: 20 }}>Loading students…</p>;
   if (error) return <p style={{ padding: 20, color: "red" }}>Error: {error}</p>;
 
   return (
@@ -194,4 +203,18 @@ const backButtonStyle = {
   fontSize: 13,
   cursor: "pointer",
   boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+};
+
+const LoaderPlaceHolder = {
+  position: "fixed",       // pin to the viewport
+  top: 0,
+  left: 0,
+  width: "100vw",          // full viewport width
+  height: "100vh",         // full viewport height
+  display: "flex",
+  flexDirection: "column", // loader above, text below
+  justifyContent: "center",// vertical center
+  alignItems: "center",    // horizontal center
+  background: "#0f172a",   // optional: match page bg
+  zIndex: 9999             // keep it above everything
 };

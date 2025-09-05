@@ -1,0 +1,15 @@
+.LoaderPlaceHolder {
+    position: fixed;          /* pin to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;             /* full viewport width */
+    height: 100vh;            /* full viewport height */
+    display: flex;
+    flex-direction: column;   /* loader above, text below */
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+    background: #0f172a;      /* optional: match page bg */
+    z-index: 9999;
+    color: white;            /* keep it above everything */
+  }
+  
