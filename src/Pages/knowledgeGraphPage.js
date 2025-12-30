@@ -14,6 +14,8 @@ export default function KnowledgeGraphPage() {
   
   console.log("API_BASE =", process.env.REACT_APP_API_URL);
 
+  
+
   useEffect(() => {
     async function fetchStudents() {
       try {
@@ -29,6 +31,17 @@ export default function KnowledgeGraphPage() {
     }
     fetchStudents();
   }, []);
+
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const studentIdFromUrl = params.get("studentId");
+
+    if (studentIdFromUrl) {
+      setSelectedStudentId(studentIdFromUrl);
+    }
+  }, []);
+
 
   const filteredStudents = students.filter(
     (stu) =>
@@ -71,10 +84,13 @@ export default function KnowledgeGraphPage() {
 
       {selectedStudentId ? (
         <div className="graph-view">
-          <button
-            onClick={() => setSelectedStudentId(null)}
-            className="back-button"
-          >
+        <button
+          onClick={() => {
+            setSelectedStudentId(null);
+            window.history.replaceState({}, "", "/knowledge-graph");
+          }}
+          className="back-button"
+        >
             <span className="back-arrow">←</span>
             Back to Student List
           </button>
