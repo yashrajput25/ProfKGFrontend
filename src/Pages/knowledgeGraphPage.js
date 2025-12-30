@@ -282,43 +282,6 @@ export default function KnowledgeGraphPage() {
 
   return (
     <div className="kg-page">
-      {/* Header */}
-      <header className={`kg-header ${animateIn ? 'kg-fade-in' : ''}`}>
-        <div 
-          className="kg-header-logo" 
-          onClick={() => navigate("/dashboard")}
-        >
-          <img src={cognitrixLogo} alt="Cognitrix Logo" className="kg-logo-image" />
-          <span className="kg-logo-text">
-            <span className="kg-logo-name">Cognitrix</span>
-            <span className="kg-logo-divider">|</span>
-            <span className="kg-logo-role">Professor</span>
-          </span>
-        </div>
-        <nav className="kg-header-nav">
-          <a 
-            href="/dashboard" 
-            className="kg-nav-link"
-          >
-            <span className="kg-nav-icon">🏠</span>
-            <span className="kg-nav-text">Home</span>
-          </a>
-          <a 
-            href="/leaderboard" 
-            className="kg-nav-link"
-          >
-            <span className="kg-nav-icon">🏆</span>
-            <span className="kg-nav-text">Leaderboard</span>
-          </a>
-          <button 
-            onClick={handleLogout} 
-            className="kg-nav-link kg-logout-btn"
-          >
-            <span className="kg-nav-icon">🚪</span>
-            <span className="kg-nav-text">Logout</span>
-          </button>
-        </nav>
-      </header>
 
       {/* Page Content */}
       <div className={`kg-content ${animateIn ? 'kg-fade-in' : ''}`}>
